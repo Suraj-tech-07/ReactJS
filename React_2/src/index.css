@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 98vw;
+  background-color: aqua;
+}
+
+body header {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+
+}
+
+body header ul {
+  display: flex;
+  width: 70vw;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: bisque;
+}
