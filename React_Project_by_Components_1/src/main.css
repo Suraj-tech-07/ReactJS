@@ -28,3 +28,7 @@ input {
     height: 30px;
     box-shadow: 0px 0px 5px black inset;
 }
+
+h1 {
+    font-weight: 900;
+}
