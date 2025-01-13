@@ -1,0 +1,29 @@
+.main {
+    border: 2px solid black;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: start;
+    padding: 0px 5px;
+}
+
+.main>* {
+    /* border: 1px solid black; */
+}
+
+.title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bolder;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
