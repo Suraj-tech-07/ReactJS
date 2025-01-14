@@ -20,10 +20,36 @@
     align-items: center;
     display: flex;
     font-weight: bolder;
+    position: sticky;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+button {
+    width: 70px;
+}
+
+input {
+    height: 30px;
+    box-shadow: inset -2px 1px 12px 1px #a7a7a7;
+    border-radius: 3px;
+}
+
+span {
+    display: flex;
+}
+
+@media only screen and(max-width:578px) {
+    .main {
+        width: 100%;
+    }
+}
+
+.main:nth-child(1) {
+    position: relative;
+    top: 0;
 }
