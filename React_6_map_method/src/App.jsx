@@ -10,8 +10,16 @@ function App() {
   // }
 
   return <>
-    <h1>Subjcts : </h1>
-    {subjects.length === 0 ? <h3>No Items Available</h3> : null}
+    <h1>Subjects : </h1>
+
+    {/* Type 1 Example : Ternary Operators*/}
+
+    {/* {subjects.length === 0 ? <h3>No Items Available</h3> : null} */}
+
+    {/* Type 2 Example : Logical Operators */}
+
+    {subjects.length === 0 && <h3> Nothing in the list.</h3>}
+
     <ul className="list-group">
       {
         subjects.map((items) => (
