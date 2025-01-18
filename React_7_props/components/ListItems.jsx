@@ -5,7 +5,7 @@ var List = (props) => {
             {
                 // console.log(props.langs)
                 (props.langs).map((item) => (
-                    <Item arg={item} key={item}></Item>
+                    <Item arg={item} key={item} points={props.polularity}></Item>
                 ))
             }
         </ul >
