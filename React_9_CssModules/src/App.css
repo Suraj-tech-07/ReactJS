@@ -1,0 +1,6 @@
+body {
+  height: 98vh;
+  width: 98vw;
+  background: linear-gradient(rgb(254, 124, 4), white, green);
+  overflow-x: hidden;
+}

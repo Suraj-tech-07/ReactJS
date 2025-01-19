@@ -1,0 +1,22 @@
+.ulClass {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 98%;
+    align-items: flex-start;
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 44px;
+    row-gap: 36px;
+}
+
+.ulClass>* {
+    height: 23vh;
+    width: 18vw;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: linear-gradient(45deg, yellow, red, orange);
+    position: relative;
+    left: 66px;
+}

@@ -1,0 +1,13 @@
+.heading_style {
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 1px 13px 37px 3px yellow;
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+    top: -21px;
+    left: -8px;
+}
