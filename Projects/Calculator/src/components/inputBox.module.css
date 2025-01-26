@@ -1,0 +1,9 @@
+.inputBox {
+    border: 2px solid rgb(101, 99, 99);
+    outline: none;
+    border-radius: 2px;
+    font-size: 30px;
+    width: 90%;
+    margin: 10px;
+    box-shadow: inset 0px 0px 4px 0px rgb(55, 54, 54);
+}

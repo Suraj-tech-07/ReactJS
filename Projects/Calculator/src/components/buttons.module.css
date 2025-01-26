@@ -1,0 +1,13 @@
+.buttonsParent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.buttonsParent button {
+    height: 50px;
+    width: 50px;
+    border-radius: 2px;
+}
