@@ -1,14 +1,12 @@
 import style from "./buttons.module.css";
-const Buttons = (props) => {
-    const buttonItem = props.buttonsText;
-    return
-    <div className={style.buttonsParent}>
-        {/* {
-            buttonItem.map((item) => {
-                <button>{item}</button>
-            })
-        } */}
-        <button>Press</button>
+const Keys = (props) => {
+    // var buttonItem = props.buttonsText;
+    return <div className={style.buttonsParent}>
+        {
+            (props.buttonsText).map((item) => (
+                <button key={item}>{item}</button>
+            ))
+        }
     </div>
 }
-export default Buttons;
+export default Keys;
