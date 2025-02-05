@@ -1,0 +1,30 @@
+.inputConatiner {
+    max-width: 400px;
+    /* background-color: cyan; */
+    /* border: 2px solid black; */
+    border-radius: 4px;
+}
+
+button {
+    width: 100px;
+    position: relative;
+    bottom: 4px;
+}
+
+.inputConatiner input {
+    /* font-size: 1.3rem; */
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid black;
+}
+
+.nameStyling {
+    height: 33px;
+    width: 70%;
+}
+
+.dateStyling {
+    width: 140px;
+    height: 33px;
+    font-size: 1.2rem;
+}

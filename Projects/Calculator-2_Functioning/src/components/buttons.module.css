@@ -1,0 +1,29 @@
+.buttonsParent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    width: 90%;
+    margin: 10px;
+    column-gap: 10px;
+    align-items: center;
+    row-gap: 5px;
+
+}
+
+.buttonsParent button {
+    height: 50px;
+    width: 50px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.buttonsParent button:hover {
+    background-color: rgba(128, 128, 128, 0.523);
+}
+
+
+.buttonsParent button:last-child {
+    width: calc(100% - 100px);
+}
