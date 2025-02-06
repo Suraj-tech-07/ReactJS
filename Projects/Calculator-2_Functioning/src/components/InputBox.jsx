@@ -1,7 +1,7 @@
 import styles from "./inputBox.module.css";
-const InputBox = () => {
+const InputBox = ({ calculate, handleOnChange }) => {
     return <>
-        <input type="text" name="texts" id="inputBox" className={styles.inputBox} />
+        <input type="text" name="texts" id="inputBox" className={styles.inputBox} value={calculate} readOnly />
     </>
 }
 export default InputBox;

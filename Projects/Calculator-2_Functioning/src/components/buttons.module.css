@@ -12,18 +12,18 @@
 
 }
 
-.buttonsParent button {
+.buttonsParent input[type="button"] {
     height: 50px;
     width: 50px;
     border-radius: 2px;
     cursor: pointer;
 }
 
-.buttonsParent button:hover {
+.buttonsParent input[type="button"]:hover {
     background-color: rgba(128, 128, 128, 0.523);
 }
 
 
-.buttonsParent button:last-child {
+.buttonsParent input[type="button"]:last-child {
     width: calc(100% - 100px);
 }
