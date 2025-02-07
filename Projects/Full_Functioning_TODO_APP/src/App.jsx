@@ -1,27 +1,33 @@
-import Heading from "./components/Todo_Heading";
-import InputItem from "./components/Todo_Input_Items";
-import './App.css';
-import TodoItem from "./components/Todo_Items";
+import styles from './components/App.module.css';
+import Title from './components/TodoTitle';
+import AddNewItem from './components/TodoAddNewItem';
+import Container from './components/Container';
+import NoItemMessage from './components/NoItemMessage.jsx';
+import ListNewItems from './components/ListNewItem.jsx';
+import { useState } from 'react';
 const App = () => {
-  const Title = "Daily TODO APP";
-  var itemCompleteDate;
-  var itemValue;
-  const handleOnNameChange = (event) => {
-    itemValue = event.target.value;
-    console.log(itemValue);
+  const todoTitle = "Daily Todo App";
+  const noItem = "There is Nothing todo";
+  // const Items = [
+  //   { name: "Buy Books", date: "10/12/2025" },
+  //   { name: "Buy Clothes", date: "10/12/2026" },
+  //   { name: "Buy Merchandise", date: "10/12/2027" },
+  // ];
 
-  }
-  const handleOnDateChange = (event) => {
-    itemCompleteDate = event.target.value;
-    console.log(itemCompleteDate);
+  const [item, setItem] = useState();
+  // const [itemDate, setItemDate] = useState();
 
-  }
   return <>
-    <div className="todoContainer">
-      <Heading Title={Title}></Heading>
-      <InputItem handleOnDateChange={handleOnDateChange} handleOnNameChange={handleOnNameChange}></InputItem>
-      <TodoItem itemCompleteDate={itemCompleteDate} itemValue={itemValue}></TodoItem>
-    </div>
+    <Container className={styles.appContainer}>
+      <Title title={todoTitle}></Title>
+      <AddNewItem></AddNewItem>
+      {
+        Items.length === 0 && <NoItemMessage noItem={noItem}></NoItemMessage>
+      }
+      <Container className={styles.listContainer}>
+        <ListNewItems items={Items} ></ListNewItems>
+      </Container>
+    </Container>
   </>
 }
 export default App;
