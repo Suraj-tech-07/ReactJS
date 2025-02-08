@@ -12,9 +12,13 @@ const AddNewItem = ({ onNewItem }) => {
     }
 
     const handleOnClick = () => {
-        onNewItem(name, date)
-        setName("");
-        setDate("");
+        if (name !== "" && date !== "") {
+            onNewItem(name, date);
+            setName("");
+            setDate("");
+        } else {
+            alert("Please Enter the Item and Date");
+        }
     }
     return <>
         <div className={styles.addContainer}>

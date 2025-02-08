@@ -16,14 +16,18 @@ const App = () => {
 
   const [todoItems, setTodoItems] = useState(Items);
 
-  // const [itemDate, setItemDate] = useState();
-  // const [itemName, setItemName] = useState();
-
   const onNewItem = (itemName, itemDate) => {
     console.log(`New Items are : ${itemName} Date : ${itemDate}`);
-    setTodoItems({ name: itemName, date: itemDate });
+    const newObj = [...todoItems, { name: itemName, date: itemDate },];
+    setTodoItems(newObj);
     console.log(todoItems);
 
+  }
+
+  const onRemoveItem = (itemName) => {
+    console.log(`Item Deleted ${itemName}`);
+    const newObj = todoItems.filter((item) => item.name !== itemName);
+    setTodoItems(newObj);
   }
 
   return <>
@@ -31,10 +35,10 @@ const App = () => {
       <Title title={todoTitle}></Title>
       <AddNewItem onNewItem={onNewItem}></AddNewItem>
       {
-        Items.length === 0 && <NoItemMessage noItem={noItem}></NoItemMessage>
+        todoItems.length === 0 && <NoItemMessage noItem={noItem}></NoItemMessage>
       }
       <Container className={styles.listContainer}>
-        <ListNewItems items={Items} ></ListNewItems>
+        <ListNewItems items={todoItems} onRemoveItem={onRemoveItem}></ListNewItems>
       </Container>
     </Container>
   </>
