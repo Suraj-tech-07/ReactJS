@@ -1,5 +1,6 @@
 import styles from './ListNewItems.module.css'
 import Container from "./Container"
+import { MdDelete } from "react-icons/md";
 const ListNewItems = ({ items, onRemoveItem }) => {
 
     const handleOnClicked = (clickedName) => {
@@ -14,7 +15,7 @@ const ListNewItems = ({ items, onRemoveItem }) => {
                 <div className={styles.listItem} key={index}>
                     <input type="text" name="todoname" id="todoname" className="" disabled value={todos.name} />
                     <input type="text" name="tododate" id="tododate" className="" disabled value={todos.date} />
-                    <button className="btn btn-danger" onClick={() => handleOnClicked(todos.name)}>Remove</button>
+                    <button className="btn btn-danger" onClick={() => handleOnClicked(todos.name)}> <MdDelete /> </button>
                 </div >
             ))
         }

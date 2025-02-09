@@ -1,7 +1,4 @@
-let obj = {
-    a: "Hello",
-    b: "world",
-    c: "java",
-    d: "JS"
-};
-console.log(obj['a']);
+const time = Date();
+console.log(time);
+
+
