@@ -1,0 +1,31 @@
+.listItem {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 2rem;
+    padding: 20px;
+}
+
+.listItem input {
+    padding: 5px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+
+.listItem input[name="todoname"] {
+    font-size: 1.1rem;
+}
+
+.listItem input[name="tododate"] {
+    max-width: 140px;
+}
+
+.listItem button {
+    min-width: 80px;
+}
+
