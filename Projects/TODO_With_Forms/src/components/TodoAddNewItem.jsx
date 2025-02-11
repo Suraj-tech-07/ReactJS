@@ -24,10 +24,10 @@ const AddNewItem = ({ onNewItem }) => {
 
     }
     return <>
-        <form action='' className={styles.addContainer}>
+        <form action='' className={styles.addContainer} onSubmit={handleOnClick}>
             <input type="text" name="todoname" id="todoname" value={name} className="" onChange={onNameChange} />
             <input type="date" name="tododate" id="tododate" value={date} className="" onChange={onDateChange} />
-            <button className="btn btn-success" onClick={handleOnClick}><BiSolidCartAdd /></button>
+            <button className="btn btn-success" ><BiSolidCartAdd /></button>
         </form>
     </>
 }
