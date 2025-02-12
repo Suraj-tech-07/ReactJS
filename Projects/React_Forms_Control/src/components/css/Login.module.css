@@ -1,0 +1,78 @@
+.login_form {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 0px 20px;
+    align-items: center;
+    justify-content: normal;
+    row-gap: 2rem;
+    border-radius: 15px;
+}
+
+.login_form h1 {
+    text-align: center;
+}
+
+.userName,
+.Password,
+.forgot_link,
+.login_btn {
+    width: 100%;
+    /* background-color: cyan; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,
+button {
+    width: 80%;
+    outline: none;
+    border: none;
+    background-color: rgba(132, 127, 127, 0.19);
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
+.Password> :nth-child(2),
+.userName> :nth-child(2) {
+    position: relative;
+    right: 20px;
+    height: 15px;
+    width: 15px;
+}
+
+.login_btn button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    height: 70%;
+    background: linear-gradient(100deg, skyblue, rgba(0, 0, 255, 0.649), skyblue);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+}
+
+.forgot_link a {
+    text-decoration: none;
+    color: blue;
+}
+
+.forgot_link a:hover {
+    color: rgb(255, 77, 0);
+    cursor: pointer;
+    /* font-weight: bold; */
+    transition-duration: 0.1s;
+}
+
+.forgot_link {
+    position: relative;
+    bottom: 20px;
+}

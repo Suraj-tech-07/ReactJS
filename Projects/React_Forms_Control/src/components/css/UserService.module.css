@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6f91f08a !important;
+}
+
+.userService {
+    height: 70vh;
+    width: 50vw;
+    background: linear-gradient(100deg, skyblue, rgba(0, 0, 255, 0.649), skyblue);
+    margin: auto;
+    border-radius: 15px;
+}

@@ -1,4 +1,4 @@
-const Container = ({ props }) => {
+const Container = (props) => {
     return (
         <div>
             {props.children}
