@@ -1,9 +1,7 @@
 function createCounter(n) {
-    let count = -1;
-    function inner() {
-        count++;
-        console.log(n + count);
 
+    function inner() {
+        n++;
     }
     return inner;
 }
