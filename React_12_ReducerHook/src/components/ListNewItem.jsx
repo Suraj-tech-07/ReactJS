@@ -1,16 +1,21 @@
 import styles from './ListNewItems.module.css'
 import Container from "./Container"
 import { MdDelete } from "react-icons/md";
-const ListNewItems = ({ items, onRemoveItem }) => {
+import { useContext } from 'react';
+import { ItemsStore } from '../store/items_context';
+const ListNewItems = () => {
+
+    const { onRemoveItem } = useContext(ItemsStore);
+    const { todoItems } = useContext(ItemsStore);
 
     const handleOnClicked = (clickedName) => {
         onRemoveItem(clickedName);
         // console.log("Deleted item: ", clickedName);
-
     }
+
     return <>
         {
-            items.map((todos, index) => (
+            todoItems.map((todos, index) => (
                 <div className={styles.listItem} key={index}>
                     <input type="text" name="todoname" id="todoname" className="" disabled value={todos.name} />
                     <input type="text" name="tododate" id="tododate" className="" disabled value={todos.date} />

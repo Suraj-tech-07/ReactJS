@@ -1,0 +1,30 @@
+.appContainer {
+    margin: auto;
+    width: 55vw;
+    min-width: 500px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.listContainer {
+    width: 100%;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width:980px) {
+    .appContainer {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width:763px) {
+    .appContainer {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width:590px) {
+    .appContainer {
+        width: 100vw;
+    }
+}
