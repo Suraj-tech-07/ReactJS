@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Logo</title>
+    <style>
+        /* Styling for the video to make it round */
+        video {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            /* Makes the video circular */
+            object-fit: cover;
+            /* Ensures video fills the round shape */
+            border: 5px solid black;
+            /* Removes default border */
+            pointer-events: none;
+            padding: -5px;
+            /* Disables hover and click */
+        }
+
+        /* Hide media controls */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <video src="./src/assets/dreaming of orange cat.mp4" loop autoplay muted></video>
+</body>
+
+</html>
