@@ -8,3 +8,16 @@
 .disabled {
     display: none;
 }
+
+
+.contentHeader {
+    min-height: 10vh;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+}
+
+.contentHeader ul {
+    position: relative;
+    left: 20%;
+}

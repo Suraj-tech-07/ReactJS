@@ -1,28 +1,32 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../css/Header.module.css";
 import logo from "../assets/logo.jpg";
 const Header = () => {
     return (
-        <div className={`${styles.header}`} >
-            <div className={`${styles.header_hamburger, styles.disabled} `}>
-                <GiHamburgerMenu />
-            </div>
+        <>
+            <div className={`, ${styles.contentHeader} d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start bg-black`} >
+                <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlinkHref="#bootstrap"></use></svg>
+                </a>
 
-            <div className={`${styles.header_logo}`}>
-                <img src={logo} alt="logo" height="40px" width="40px" className='rounded-circle' />
-            </div>
-
-            <div className="header-navbar">
-                <ul className='list-group list-group-horizontal space-between'>
-                    <li>Home </li>
-                    <li>Products</li>
-                    <li>About</li>
-                    <li>Services</li>
+                <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" className="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="#" className="nav-link px-2 text-white">Features</a></li>
+                    <li><a href="#" className="nav-link px-2 text-white">Pricing</a></li>
+                    <li><a href="#" className="nav-link px-2 text-white">FAQs</a></li>
+                    <li><a href="#" className="nav-link px-2 text-white">About</a></li>
                 </ul>
-            </div>
-            <div className="header-login-signup">login and signup</div>
-        </div >
+
+                <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" className="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search" />
+                </form>
+
+                <div className="text-end">
+                    <button type="button" className="btn btn-outline-light me-2">Login</button>
+                    <button type="button" className="btn btn-warning">Sign-up</button>
+                </div>
+            </div >
+        </>
     );
 }
 export default Header;

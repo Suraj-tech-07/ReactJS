@@ -1,0 +1,9 @@
+.header_Container {
+    display: flex !important;
+}
+
+.footerContainer {
+    position: fixed !important;
+    bottom: 0px !important;
+
+}

@@ -1,0 +1,9 @@
+.postlistContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 22%;
+    column-gap: 30px;
+    position: relative;
+    top: 180px;
+}
