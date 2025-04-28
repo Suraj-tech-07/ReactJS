@@ -17,7 +17,7 @@ function App() {
 
   return <>
     <Container className="header_Container">
-      <SideBar setTabState={setTabState}></SideBar>
+      <SideBar setTabState={setTabState} currentTab={currentTab}></SideBar>
       <Header></Header>
       <div style={{ position: "relative", left: "100px" }}>
         {
@@ -28,7 +28,7 @@ function App() {
           <Form className="formContainer" style={{ position: "relative ", top: "200px" }}></Form>
         }
       </div>
-    </Container>
+    </Container >
     <Footer className="footerContainer" ></Footer>
   </>
 }

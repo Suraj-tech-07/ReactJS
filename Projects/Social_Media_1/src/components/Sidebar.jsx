@@ -1,8 +1,8 @@
 import logo from '../assets/logo.jpg';
-const SideBar = ({ className, setTabState }) => {
+const SideBar = ({ currentTab, setTabState }) => {
     const handleOnClick = (param) => {
         setTabState(param);
-        console.log(param);
+        currentTab = param;
 
     };
     return <>
@@ -14,13 +14,13 @@ const SideBar = ({ className, setTabState }) => {
             <hr />
             <ul className="nav nav-pills flex-column mb-auto">
                 <li className="nav-item" onClick={() => { handleOnClick("Home") }}>
-                    <a href="#" className="nav-link active" aria-current="page">
+                    <a href="#" className={`nav-link text-white ${currentTab === "Home" && "active"}`} aria-current="page">
                         <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
                         Home
                     </a>
                 </li>
                 <li onClick={() => { handleOnClick("CreatePost") }}>
-                    <a href="#" className="nav-link text-white">
+                    <a href="#" className={`nav-link text-white ${currentTab === "CreatePost" && "active"}`}>
                         <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
                         Create Post
                     </a>

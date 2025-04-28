@@ -1,2 +1,2 @@
 import { createContext } from "react";
-export const ItemsStore = React.createContext([], function () { }, function () { }, {}, {});
+export const ItemsStore = createContext([], function () { }, function () { }, {}, {});
