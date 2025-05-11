@@ -6,6 +6,7 @@ const Post = () => {
     const { postList } = useContext(PostList);
     return (
         <div className="container-box" style={{ position: 'relative', left: '300px', top: '0px' }}>
+            {/* {console.log("Post List", postList)} */}
             {postList.map((post) => (<Card key={post.id} post={post} />))};
         </div>
     );

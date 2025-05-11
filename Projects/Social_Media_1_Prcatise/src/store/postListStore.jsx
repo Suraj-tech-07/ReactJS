@@ -49,7 +49,7 @@ const POST_LIST = [
         title: "Morning Yoga Routine",
         body: "Started a new morning yoga routine. Feeling more energized and peaceful.",
         reactions: 12,
-        userId: 'user-1',
+        userId: 'user-6',
         tags: ["health", "yoga", "lifestyle"]
     },
     {
@@ -57,7 +57,7 @@ const POST_LIST = [
         title: "Weekend Getaway to the Beach",
         body: "Spent the weekend by the sea, soaking in the sun and waves. Much needed relaxation!",
         reactions: 27,
-        userId: 'user-2',
+        userId: 'user-7',
         tags: ["vacation", "beach", "relaxation"]
     },
     {
@@ -65,7 +65,7 @@ const POST_LIST = [
         title: "Building My First App",
         body: "Just launched my first mobile app. Excited and nervous about people's reactions!",
         reactions: 40,
-        userId: 'user-3',
+        userId: 'user-8',
         tags: ["tech", "coding", "startup"]
     },
     {
@@ -73,7 +73,7 @@ const POST_LIST = [
         title: "Best Coffee Shops in Paris",
         body: "If you're a coffee lover visiting Paris, don't miss these amazing cafes!",
         reactions: 30,
-        userId: 'user-4',
+        userId: 'user-9',
         tags: ["coffee", "Paris", "travel"]
     },
     {
@@ -81,11 +81,26 @@ const POST_LIST = [
         title: "Lessons Learned from Freelancing",
         body: "Freelancing taught me time management and the value of self-discipline.",
         reactions: 25,
-        userId: 'user-5',
+        userId: 'user-10',
         tags: ["career", "freelancing", "tips"]
     }
 ];
 
+
+// const POST_LIST = [];
+// (async () => {
+//     try {
+//         const response = await fetch('https://dummyjson.com/products');
+//         const jsonData = await response.json();
+//         const data = await jsonData.products;
+//     } catch (error) {
+//         console.log("Error in PostListStore", error);
+//     }
+// })();
+
+// fetch('https://dummyjson.com/products')
+//     .then(res => res.json())
+//     .then(console.log);
 
 const DEFAULT_STATE = { postList: [], addPost: () => { }, removePost: () => { } };
 
@@ -93,17 +108,52 @@ export const PostList = createContext(DEFAULT_STATE);
 
 // Reducer function to manage the state of the post list
 const postListReducer = (currentPostList, action) => {
-    return currentPostList;
+    let newPostList = currentPostList;
+    if (action.type === "AddPost") {
+        {
+            newPostList = [...currentPostList, action.payload.post];
+        }
+    }
+    if (action.type === "RemovePost") {
+        // console.log("Remove Post");
+        newPostList = currentPostList.filter((post) => post.id != action.payload.id);
+        // console.log(newPostList);
+    }
+
+    return newPostList;
 }
+
 const PostListProvider = ({ children }) => {
     const [postList, dispatchPostList] = useReducer(postListReducer, POST_LIST);
     // Function to add a post to the list
-    const addPost = () => {
-
+    const addPost = (event) => {
+        let newObject = {
+            id: Number(Math.floor(Math.random().toString(36).substr(2, 9))),
+            title: event.target.postTitle.value,
+            body: event.target.postBody.value,
+            reactions: Math.floor(Math.random() * 100),
+            userId: 'user-' + (Math.floor(Math.random() * 100)),
+            tags: [event.target.postTag1.value, event.target.postTag2.value, event.target.postTag3.value]
+        }
+        const newAction = {
+            type: "AddPost",
+            payload: {
+                post: newObject
+            }
+        }
+        dispatchPostList(newAction);
     }
-    const removePost = () => {
+    const removePost = (id) => {
+        //     // POST_LIST.filter((post) => post.title !== postTitle);
+        // console.log("Post Title", userId);
 
-        // Logic to remove a post from the list
+        const newAction = {
+            type: "RemovePost",
+            payload: {
+                id: id
+            }
+        }
+        dispatchPostList(newAction);
     };
     return (
         <PostList.Provider value={{ postList, addPost, removePost }}>
