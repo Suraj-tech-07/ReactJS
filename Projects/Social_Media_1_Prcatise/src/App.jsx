@@ -2,9 +2,10 @@ import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import Footer from "./components/footer";
 import UserForm from "./components/UserForm";
-// import Post from './components/PostList';
+import { useContext } from "react";
 import Post from "./components/PostList";
 import PostListProvider from "./store/postListStore";
+import NoItem from "./components/NoItem";
 import { useState } from "react";
 const App = () => {
   const [currentTab, setTab] = useState("Home");

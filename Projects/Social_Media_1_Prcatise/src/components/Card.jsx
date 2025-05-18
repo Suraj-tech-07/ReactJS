@@ -15,7 +15,7 @@ const Card = ({ post }) => {
                 <img src={cardImage} />
                 <h2 className="title" >{post.title} </h2>
                 <strong className="userId"><FaUser /> {post.userId}</strong>
-                <p className="content">{post.body}</p>
+                <p className="content">{post.description}</p>
                 <div className="hashTags d-flex gap-3" >
                     {post.tags.map((tag, index) => (
                         <span key={index} className="hashTag badge text-bg-success">{tag}</span>

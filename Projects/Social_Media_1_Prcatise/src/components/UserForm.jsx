@@ -8,7 +8,7 @@ const UserForm = () => {
         event.preventDefault();
         addPost(event);
         event.target.postTitle.value = "";
-        event.target.postBody.value = "";
+        event.target.description.value = "";
         event.target.postTag1.value = "";
         event.target.postTag2.value = "";
         event.target.postTag3.value = "";
@@ -20,7 +20,7 @@ const UserForm = () => {
                 <input type="text" name="postTitle" id="postTitle" placeholder="Enter your post title" />
             </div>
             <div className="postBody">
-                <input type="text" name="postBody" id="postBody" placeholder="Enter your post body" />
+                <input type="text" name="description" id="description" placeholder="Enter your post body" />
             </div>
             <div className="postTags">
                 <label > Please Enter at least three #tags for your post </label>
